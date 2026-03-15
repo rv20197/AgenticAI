@@ -1,3 +1,4 @@
+# Chapter 6: Strings and Text Data
 chai_type = "Ginger Tea"
 customer_name = "Alice"
 print(f"Welcome to our tea shop, {customer_name}!")
