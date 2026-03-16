@@ -34,3 +34,20 @@ print(f"Sugar levels: {sugar_levels}")
 print(f"Maximum sugar level: {max(sugar_levels)}")
 print(f"Minimum sugar level: {min(sugar_levels)}")
 print(f"Total sugar level: {sum(sugar_levels)}")
+
+base_liquids = ["water", "milk", "tea"]
+print(f"Base liquids: {base_liquids}")
+
+extra_flavors = ["cardamom", "ginger", "cinnamon"]
+print(f"Extra flavors: {extra_flavors}")
+
+all_ingredients = base_liquids + extra_flavors
+print(f"All ingredients combined: {all_ingredients}")
+
+strong_brew = ["black tea"] * 3
+print(f"Strong brew ingredients: {strong_brew}")
+
+raw_spice_data = bytearray(b"CINNAMON")
+new_raw_spice_data = raw_spice_data.replace(b"CINNA",b"CARDA")
+print(f"Raw Spice Data Bytes: {raw_spice_data}")
+print(f"New Raw Spice Data Bytes: {new_raw_spice_data}")
