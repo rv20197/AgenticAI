@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Query
-from .client.rq_client import queue
-from .queues.worker import process_query
+from client.rq_client import queue
+from queues.worker import process_query
 
 app = FastAPI()
 
@@ -13,5 +13,10 @@ async def chat(query: str = Query(..., description="The chat query of user")):
     job = queue.enqueue(process_query, query)
     return {"status": "queued", "job_id": job.id}
 
+@app.get("/job-status")
 async def get_result(jobId: str = Query(...,description="Job Id")):
     job = queue.fetch_job(job_id=jobId)
+    print(job)
+    if not job:
+        return {"error": "Job not found"}
+    return {"result": job.result}

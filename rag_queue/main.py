@@ -1,4 +1,4 @@
-from .server import app
+from server import app
 import uvicorn
 from dotenv import load_dotenv
 
@@ -11,5 +11,5 @@ main()
 
 # {
 #   "status": "queued",
-#   "job_id": "2c957829-0b2a-49ac-85ab-5b9f9544a3f1"
+#   "job_id": "cd1f413b-167a-49b6-ac45-189234efe99e"
 # }
